@@ -13,7 +13,7 @@ echo "Exercises:";
 
 function new_exercise($x)
 {
-$block = "<br/><hr/><br/><br/>Exercise ${x} starts here:<br/><br>";
+$block = "<br/><hr/><br/><br/>Exercise ${x} starts here:<br/>";
 echo $block;
 };
 
@@ -31,7 +31,7 @@ $week = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "su
 $monday = $week[0];
 
 echo $monday;
-echo "<br><br>";
+echo "<br>";
 
 
 // === Exercise 3 ===
@@ -40,7 +40,8 @@ new_exercise(3);
 // Replace “ ” with " " 
 $str = "Debugged ! Also very fun";
 echo substr($str, 0, 10);
-echo "<br><br>";
+echo "<br>";
+
 
 // === Exercise 4 ===
 // Sometimes debugging code is just like looking up code and syntax...
@@ -55,3 +56,47 @@ foreach($week as &$day)
 }
 
 print_r($week);
+echo "<br>";
+
+
+// === Exercise 5 ===
+// The result should be: "Copyright © <current year> - BeCode"
+new_exercise(5);
+
+// function copyright(int $year)
+// {
+//     return "&copy; $year BeCode";
+// }
+// //print the copyright
+// copyright(date('Y'));
+
+function copyright($year)
+{
+    echo "&copy; ${year} BeCode";
+}
+//print the copyright
+copyright(date('Y'));
+echo "<br>";
+
+
+// === Exercise 6 ===
+// The array should be printing every letter of the alphabet (a-z)
+// Fix the code so the for loop pushes each letter of the alphabet in the array
+new_exercise(6);
+
+// $arr = [];
+// for ($i = 0; $letter; $i++) {
+//     array_push($arr, $letter);
+// }
+
+// print_r($arr); // Array ([0] => a, [1] => b, [2] => c, ...) a-z alphabetical array
+
+// Add range for variable $arr
+$arr = range("a", "z");
+
+for ($i = 0; $letter; $i++) {
+    array_push($arr, $letter);
+}
+
+print_r($arr); // Array ([0] => a, [1] => b, [2] => c, ...) a-z alphabetical array
+echo "<br>";
