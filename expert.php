@@ -11,9 +11,14 @@ echo "Exercise 1 starts here:";
 
 function new_exercise()
 {
-$block = "<br/><hr/><br/><br/>Exercise $x starts here:<br/>";
+// Add variable x
+$x = 1;
+$block = "<br/><hr/><br/><br/>Exercise ${x} starts here:<br/>";
 echo $block;
-}
+};
+
+// Call function
+new_exercise();
 
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
