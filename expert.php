@@ -21,10 +21,10 @@ echo $block;
 new_exercise(1);
 
 
+new_exercise(2);
 // === Exercise 2 ===
 // Below we create a week array with all days of the week.
 // We then try to print the first day which is monday, execute the code and see what happens.
-new_exercise(2);
 
 $week = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
 // Replace [1] with [0]
@@ -34,21 +34,21 @@ echo $monday;
 echo "<br>";
 
 
+new_exercise(3);
 // === Exercise 3 ===
 // This should echo ` "Debugged !" `, fix it so that that is the literal text echo'ed
-new_exercise(3);
 // Replace “ ” with " " 
 $str = "Debugged ! Also very fun";
 echo substr($str, 0, 10);
 echo "<br>";
 
 
+new_exercise(4);
 // === Exercise 4 ===
 // Sometimes debugging code is just like looking up code and syntax...
 // The print_r($week) should give:  Array ( [0] => mon [1] => tues [2] => wednes [3] => thurs [4] => fri [5] => satur [6] => sun )
 // Look up whats going wrong with this code, and then fix it
 // Bonus: can you fix it with changing just one character? (hard)
-new_exercise(4);
 
 foreach($week as &$day)
 {
@@ -59,9 +59,9 @@ print_r($week);
 echo "<br>";
 
 
+new_exercise(5);
 // === Exercise 5 ===
 // The result should be: "Copyright © <current year> - BeCode"
-new_exercise(5);
 
 // function copyright(int $year)
 // {
@@ -79,10 +79,10 @@ copyright(date('Y'));
 echo "<br>";
 
 
+new_exercise(6);
 // === Exercise 6 ===
 // The array should be printing every letter of the alphabet (a-z)
 // Fix the code so the for loop pushes each letter of the alphabet in the array
-new_exercise(6);
 
 // $arr = [];
 // for ($i = 0; $letter; $i++) {
@@ -94,9 +94,41 @@ new_exercise(6);
 // Add range for variable $arr
 $arr = range("a", "z");
 
-for ($i = 0; $letter; $i++) {
-    array_push($arr, $letter);
-}
+// And remove for loop
+// for ($i = 0; $letter; $i++) {
+//     array_push($arr, $letter);
+// }
 
 print_r($arr); // Array ([0] => a, [1] => b, [2] => c, ...) a-z alphabetical array
 echo "<br>";
+
+
+new_exercise(7);
+// === Exercise 7 ===
+// Have the result of the function say: "Welcome John Smith" or "No access"
+// Depending on the given information.
+// function login(string $email, string $password)
+// {
+//     if($email == 'john@example.be' || $password == 'pocahontas') {
+//         return 'Welcome John';
+//         return ' Smith';
+//     }
+//     return 'No access';
+// }
+
+function login(string $email, string $password)
+{
+    if($email == 'john@example.be' && $password == 'pocahontas') {
+        return 'Welcome John Smith <br>';
+        // return ' Smith';
+    }
+    return 'No access <br>';
+}
+/* do not change any code below */
+//should greet the user with his full name (John Smith)
+echo login('john@example.be', 'pocahontas');
+//Should say: no access
+echo login('john@example.be', 'dfgidfgdfg');
+//Should say: no access
+echo login('wrong@example', 'wrong');
+/* You can change code again */
